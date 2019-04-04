@@ -7,9 +7,16 @@ import { FormsModule } from '@angular/forms';
 
 import { UserComponent } from './user.component';
 
+const routes: Routes = [
+
+]
+
 @NgModule({
     imports: [
-        CommonModule
+        CommonModule,
+        RouterModule.forChild(routes),
+        HttpClientModule,
+        FormsModule
     ]
 })
 
