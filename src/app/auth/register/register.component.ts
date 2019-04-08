@@ -6,7 +6,7 @@ import { Router } from '@angular/router';
   selector: 'bwm-register',
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.scss']
-});
+})
 
 export class RegisterComponent implements OnInit {
   formData: any = {username: 'Martin'};
