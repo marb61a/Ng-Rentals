@@ -7,8 +7,19 @@ import { FormsModule } from '@angular/forms';
 
 import { UserComponent } from './user.component';
 
-const routes: Routes = [
+import { UserService } from './shared/user.service';
+import { AuthService } from '../auth/shared/auth.service';
 
+import { UserDetailComponent } from './user-detail/user-detail.component';
+
+const routes: Routes = [
+    {
+        path: 'users',
+        component: UserComponent,
+        children: [
+            { path: 'profile', canActivate: [AuthGuard], component: UserDetailComponent }
+        ]
+    }
 ]
 
 @NgModule({
@@ -17,6 +28,14 @@ const routes: Routes = [
         RouterModule.forChild(routes),
         HttpClientModule,
         FormsModule
+    ],
+    declarations: [
+        UserComponent,
+        UserDetailComponent
+    ],
+    providers: [
+        UserService,
+        AuthService
     ]
 })
 
