@@ -43,6 +43,12 @@
                 <li class="nav-item">
                     <a class="nav-link"> {{auth.getUsername()}}</a>
                 </li>
+                <div class="nav-item dropdown clickable">
+
+                </div>
+                <li class="nav-item clickable">
+                    <a class="nav-link" (click)="logout()">Logout</a>
+                </li>
             </ngContainer>
         </ul>
     </div>

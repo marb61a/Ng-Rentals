@@ -19,4 +19,23 @@
         font-size: 14px;
     }
     
+    .btn-bwm-search {
+        border-color: $main-color;
+        color: $main-color;
+    
+        &:hover, &:focus, &:active {
+            background-color: transparent;
+            border-color: $main-color !important;
+            color: $main-color !important;
+            box-shadow: none;
+        }
+    }
+    
+    .dropdown-item {
+        font-size: 14px;
+    
+        &:active, &:focus {
+            background-color: $main-color;
+        }
+    }
 }
